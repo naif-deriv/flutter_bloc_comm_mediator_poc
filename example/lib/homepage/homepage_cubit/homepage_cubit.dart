@@ -2,11 +2,10 @@ import 'package:bloc_comm_mediator_poc/component/component.dart';
 import 'package:bloc_comm_mediator_poc/mediator/mediator.dart';
 import 'package:example/auth_cubit/auth_cubit.dart';
 import 'package:example/connection_cubit/connection_cubit.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'homepage_state.dart';
 
-class HomepageCubit extends Cubit<HomepageState> implements IMediator {
+class HomepageCubit extends MediatorCubit<HomepageState> {
   HomepageCubit() : super(HomepageState(connectionState: '', authState: ''));
 
   @override
